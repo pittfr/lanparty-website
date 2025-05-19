@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="logos" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#outer-glow-10);
+      }
+    </style>
+    <filter id="outer-glow-10" x="133" y="91" width="814" height="898" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="43"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="tiktok" class="cls-1">
+    <path d="M556.986,220.125c0,4.51.009,13.99.239,18.44v237.36c-.11-.056-.223-.108-.333-.164v172.514c.319,3.157.483,6.359.483,9.6,0,52.053-42.197,94.25-94.25,94.25s-94.25-42.197-94.25-94.25,42.197-94.25,94.25-94.25c10.52,0,20.636,1.725,30.083,4.905v-112.706c-9.181-1.271-18.552-1.949-28.083-1.949-112.11,0-203,90.89-203,203s90.89,203,203,203,203-90.89,203-203c0-9.51-.65-18.86-1.92-28.02v-193.03c41.939,29.59,96.441,46.299,151.67,46.3v-108c-81.738,0-151.333-72.262-151.333-154"/>
+  </g>
+</svg>

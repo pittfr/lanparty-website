@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="logos" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 25px;
+      }
+
+      .cls-2 {
+        filter: url(#outer-glow-4);
+      }
+    </style>
+    <filter id="outer-glow-4" x="143" y="156" width="787" height="755" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="26"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="trophy" class="cls-2">
+    <path id="main" class="cls-1" d="M584.434,587.624v78.215c67.927,18.292,117.927,80.326,117.927,154.03h-319.039c0-71.689,47.294-132.341,112.38-152.437v-76.89c-79.367-31.248-140.518-151.458-150.422-300.422-.94-13.973-1.42-28.215-1.42-42.649h385.584c0,14.434-.48,28.676-1.42,42.649-9.617,144.664-67.581,262.207-143.589,297.504Z"/>
+    <path id="left_wing" data-name="left wing" class="cls-1" d="M407.717,508.449c-59.29-1.555-111.401-38.042-142.553-92.936-.787-1.401-1.574-2.821-2.342-4.261-7.735-14.357-14.068-29.942-18.771-46.43-5.317-18.733-8.522-38.656-9.232-59.347h111.67c7.312,80.077,29.5,150.979,61.228,202.975Z"/>
+    <path id="right_wing" data-name="right wing" class="cls-1" d="M666.102,508.449c59.29-1.555,111.401-38.042,142.553-92.936.787-1.401,1.574-2.821,2.342-4.261,7.735-14.357,14.068-29.942,18.771-46.43,5.317-18.733,8.522-38.656,9.232-59.347h-111.67c-7.312,80.077-29.5,150.979-61.228,202.975Z"/>
+  </g>
+</svg>

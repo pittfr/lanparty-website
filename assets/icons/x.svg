@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="logos" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 15px;
+      }
+
+      .cls-2 {
+        filter: url(#outer-glow-7);
+      }
+    </style>
+    <filter id="outer-glow-7" x="97" y="99" width="884" height="882" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="43"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="x" class="cls-2">
+    <path class="cls-1" d="M419.662,236.349h-176.662l417.338,607.302h176.662L419.662,236.349ZM321.563,277.501h77.316l364.963,530.402h-77.316L321.563,277.501Z"/>
+    <g>
+      <polygon class="cls-1" points="814.554 236.349 762.178 236.349 545.479 489.83 568.879 523.723 814.554 236.349"/>
+      <polygon class="cls-1" points="243 843.651 295.375 843.651 525.216 574.798 501.786 540.94 243 843.651"/>
+    </g>
+  </g>
+</svg>

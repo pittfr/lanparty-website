@@ -1,0 +1,159 @@
+.footer{
+    background-color: var(--footer-color);
+    padding: 3vh 5vw 3vh 5vw;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    cursor: default;
+
+    .footer-container{
+        display: flex;
+        width: 100%;
+
+        li{
+            list-style: none;
+        }
+
+        h2{
+            font-size: clamp(25px, 3vw, 40px);
+            margin-bottom: 1.5rem;
+            white-space: nowrap;
+        }
+
+        .footer-main{
+            flex: 3;
+
+            .about-container{
+                .about-content{
+                    padding: 0.5rem;
+                }
+                
+                p{
+                    font-size: clamp(20px, 2vw, 25px);
+                    margin-bottom: 1rem;
+                }
+
+                ul{
+                    padding-left: 1rem;
+
+                    li{
+                        margin-bottom: 0.5rem;
+                        font-size: clamp(12px, 1.5vw, 16px);
+                        a{
+                            color: var(--secondary-color)
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-media{
+            flex: 2;
+
+            .social-media-links{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                width: 100%;
+                padding: 0.5rem;
+
+                li{
+                    width: clamp(50px, 4vw, 70px);
+                    aspect-ratio: 1/1;
+                    background: linear-gradient(25deg, var(--primary-color) -10%, var(--secondary-color) 100%);
+                }
+
+                a{  
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .instagram{
+                    mask-image: url("../assets/icons/instagram.svg");
+                    mask-repeat: no-repeat;
+                    mask-size: cover;
+                }
+
+                .tiktok{
+                    mask-image: url("../assets/icons/tiktok.svg");
+                    mask-repeat: no-repeat;
+                    mask-size: cover;
+                }
+
+                .facebook{
+                    mask-image: url("../assets/icons/facebook.svg");
+                    mask-repeat: no-repeat;
+                    mask-size: cover;
+                }
+
+                .youtube{
+                    mask-image: url("../assets/icons/youtube.svg");
+                    mask-repeat: no-repeat;
+                    mask-size: cover;
+                }
+
+                .x{
+                    mask-image: url("../assets/icons/x.svg");
+                    mask-repeat: no-repeat;
+                    mask-size: cover;
+                }
+
+                .mail{
+                    mask-image: url("../assets/icons/mail.svg");
+                    mask-repeat: no-repeat;
+                    mask-size: cover;
+                }
+            }
+        }
+    }
+
+    .footer-copyright{
+        font-size: clamp(7px, 2vw, 16px);
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: center;
+        width: 100%;
+        white-space: nowrap;
+        color: lightgrey;
+        opacity: 0.7;
+    }
+}
+
+.footer::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    padding-top: 20px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background: linear-gradient(45deg, var(--primary-color) -30%, var(--secondary-color) 80%);
+    z-index: -1;
+    opacity: 0.3;
+    filter: blur(10px);
+}
+
+@media (max-width: 800px){
+    .footer-container{
+        flex-direction: column-reverse;
+        align-items: center;
+
+        h2{
+            text-align: center;
+        }
+
+        .footer-media{
+            margin-bottom: 2rem;
+        }
+
+        .about-container{
+            p{
+                text-align: center;
+            }
+        }
+    }
+}

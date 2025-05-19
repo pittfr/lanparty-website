@@ -1,0 +1,256 @@
+.container{
+    width: 100%;
+    cursor: default;
+
+    .hero-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+    
+        h1{
+            font-size: clamp(50px, 10vw, 150px);
+            margin-bottom: 5px;
+        }
+    
+        h3{
+            font-size: clamp(14px, 3.5vw, 49px);
+            font-weight: 400;
+            background: linear-gradient( 25deg, var(--primary-color), var(--secondary-color) 70%);
+            background-clip: text;
+            color: transparent;
+        }
+    
+        .home-buttons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            min-width: 50%;
+            height: 7vw;
+            margin-top: calc(2rem + 1vw);
+    
+            .register, .view-games{
+                padding: clamp(10px, 1vw, 20px) clamp(15px, 2vw, 35px);
+                border-radius: 0.5rem;
+                color: white;
+                min-width: clamp(120px, 15vw, 280px);
+                height: clamp(40px, 5vw, 84px);
+                font-weight: 500;
+                text-align: center;
+                font-size: clamp(14px, 1.5vw, 30px);
+                white-space: nowrap;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+    
+            .view-games{
+                background-color: var(--background-color);
+            }
+    
+            .register::before, .view-games::before{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                height: 100%;
+                translate: -50% -50%;
+                background: linear-gradient(25deg, var(--primary-color) -10%, var(--secondary-color) 100%);
+                border-radius: 0.5rem;
+                padding: 2px;
+                z-index: -2;
+            }
+    
+            .register::after, .view-games::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                height: 100%;
+                translate: -50% -50%;
+                background: linear-gradient(25deg, var(--primary-color) 30%, var(--secondary-color) 130%);
+                border-radius: 0.5rem;
+                padding: 2px;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                z-index: -1;
+            }
+    
+            .register:hover::after, .view-games:hover::after{
+                opacity: 1;
+            }
+        }
+    }
+
+    .countdown-container{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        min-width: 60%;
+        height: 100%;
+        aspect-ratio: 6/2;
+        background: var(--background-color);
+        border-radius: 1rem;
+        position: relative;
+        margin-bottom: 15vh;
+
+        h2{
+            font-weight: 350;
+            font-size: clamp(30px, calc(1rem + 3vw), 90px);
+            background: linear-gradient( 25deg, var(--primary-color) -20%, var(--secondary-color) 70%);
+            background-clip: text;
+            white-space: nowrap;
+            color: transparent;
+            flex: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        span.countdown{
+            font-size: clamp(30px, calc(1rem + 5vw), 150px);
+            flex: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span.hours, span.minutes, span.seconds{
+                display: inline-block;
+                width: 1.3em;
+                text-align: center;
+                font-variant-numeric: tabular-nums;
+            }
+
+            span.colon{
+                display: inline-block;
+                width: 0.5em;
+                text-align: center;
+                color: grey;
+            }
+        }
+    }
+
+    .countdown-container::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        min-width: 100%;
+        height: 100%;
+        background: linear-gradient(25deg, var(--primary-color) -10%, var(--secondary-color) 100%);
+        z-index: -1;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        filter: blur(10px);
+    }
+
+    .info-cards-container{
+        min-width: 100%;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 15vh;
+
+        .info-card{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: var(--element-color);
+            border-radius: 0.5rem;
+            padding: 2rem 1rem 1rem 1rem;
+            margin: 1rem;
+            width: clamp(375px, 20vw, 425px);
+            aspect-ratio: 1/1;
+
+            .card-image{
+                background: linear-gradient(25deg, var(--primary-color) -10%, var(--secondary-color) 100%);;
+                min-width: 70%;
+                aspect-ratio: 1/1;
+                filter: drop-shadow(0 0 10 var(--primary-color))
+            }
+
+            .card-label{
+                font-size: clamp(25px, calc(1rem + 0.5vw), 45px);
+                font-weight: 500;
+                margin-top: 1rem;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+
+        .controller .card-image{
+            mask-image: url("../assets/icons/controller.svg");
+            mask-repeat: no-repeat;
+            mask-size: cover;
+        }
+
+        .team .card-image{
+            mask-image: url("../assets/icons/team.svg");
+            mask-repeat: no-repeat;
+            mask-size: cover;
+        }
+
+        .location .card-image{
+            mask-image: url("../assets/icons/location.svg");
+            mask-repeat: no-repeat;
+            mask-size: cover;
+        }
+
+        .trophy .card-image{
+            mask-image: url("../assets/icons/trophy.svg");
+            mask-repeat: no-repeat;
+            mask-size: cover;
+        }
+    }
+
+    .featured-games-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        padding-top: 0;
+        margin-bottom: 10rem;
+
+        h1{
+            font-size: clamp(30px, calc(1rem + 2vw), 50px);
+            margin-bottom: 8vh;
+        }
+
+        .featured-games{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+
+            .game-logo{
+                background-color: var(--element-color);
+                border-radius: 0.5rem;
+                width: clamp(300px, calc(2rem + 20vw), 560px);
+                aspect-ratio: 16/9;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px){
+    .countdown-container::before{
+        display: none;
+    }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="logos" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#outer-glow-9);
+      }
+    </style>
+    <filter id="outer-glow-9" x="45" y="154" width="990" height="772" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="43"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="youtube" class="cls-1">
+    <path d="M890.333,366.778c-15.556-66.667-88-72.445-88-72.445-24.444-6.222-262.333-10.667-262.333-10.667,0,0-237.889,4.445-262.333,10.667,0,0-72.444,5.778-88,72.445,0,0-16.444,82.889-15.111,173.222-1.333,90.333,15.111,173.222,15.111,173.222,15.556,66.667,88,72.444,88,72.444,24.444,6.222,262.333,10.667,262.333,10.667,0,0,237.889-4.444,262.333-10.667,0,0,72.444-5.778,88-72.444,0,0,16.444-82.889,15.111-173.222,1.333-90.333-15.111-173.222-15.111-173.222ZM467.667,650.333v-220.667l192,110.333-192,110.333Z"/>
+  </g>
+</svg>

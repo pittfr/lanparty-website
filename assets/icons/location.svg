@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="logos" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        filter: url(#outer-glow-3);
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 25px;
+      }
+    </style>
+    <filter id="outer-glow-3" x="210" y="104" width="645" height="829" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="26"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="location" class="cls-1" d="M763.118,425.784c0-127.459-103.325-230.784-230.784-230.784s-230.784,103.326-230.784,230.784c0,0-25.176,163.647,230.784,411.216,255.961-247.569,230.784-411.216,230.784-411.216ZM532.333,511.104c-47.121,0-85.32-38.199-85.32-85.32s38.199-85.32,85.32-85.32,85.32,38.199,85.32,85.32-38.199,85.32-85.32,85.32Z"/>
+</svg>

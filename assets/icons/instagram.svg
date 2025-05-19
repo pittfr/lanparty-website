@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="logos" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 50px;
+      }
+
+      .cls-2 {
+        filter: url(#outer-glow-6);
+      }
+    </style>
+    <filter id="outer-glow-6" x="69" y="69" width="942" height="942" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="43"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="instagram" class="cls-2">
+    <circle class="cls-1" cx="540" cy="540" r="155.631"/>
+    <rect class="cls-1" x="223" y="223" width="634" height="634" rx="142" ry="142"/>
+    <circle class="cls-1" cx="733.643" cy="347.792" r="17.213"/>
+  </g>
+</svg>

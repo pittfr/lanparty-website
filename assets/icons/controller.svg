@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="logos" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 25px;
+      }
+
+      .cls-3 {
+        filter: url(#outer-glow-1);
+      }
+    </style>
+    <filter id="outer-glow-1" x="39" y="188" width="1002" height="704" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="26"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="controller" class="cls-3">
+    <path class="cls-1" d="M540,610.418s-106.841-1.781-113.964,0-129.99,194.095-195.875,190.533c-65.885-3.561-96.157-67.666-99.718-85.473-3.561-17.807,40.956-190.533,69.447-304.497,28.491-113.964,99.718-128.209,153.139-131.771,53.421-3.561,71.227,39.175,71.227,39.175h115.744s115.744,0,115.744,0c0,0,17.807-42.736,71.227-39.175,53.421,3.561,124.648,17.807,153.139,131.771,28.491,113.964,73.008,286.69,69.447,304.497-3.561,17.807-33.833,81.911-99.718,85.473-65.885,3.561-188.752-188.752-195.875-190.533-7.123-1.781-113.964,0-113.964,0Z"/>
+    <polygon class="cls-2" points="420.556 464.138 420.556 490.959 360.526 490.959 360.526 556.645 335.802 556.645 335.802 490.959 277.203 490.959 277.203 464.138 335.802 464.138 335.802 409.749 360.526 409.749 360.526 464.138 420.556 464.138"/>
+    <circle class="cls-2" cx="767.136" cy="480.032" r="17.313"/>
+    <circle class="cls-2" cx="713.32" cy="423.051" r="17.313"/>
+    <circle class="cls-2" cx="659.504" cy="480.032" r="17.313"/>
+    <circle class="cls-2" cx="713.32" cy="533.849" r="17.313"/>
+  </g>
+</svg>

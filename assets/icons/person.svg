@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="logos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 60px;
+      }
+    </style>
+  </defs>
+  <g id="person">
+    <circle class="cls-1" cx="540" cy="387.296" r="105.597"/>
+    <path class="cls-1" d="M764.67,798.301h-449.34c0-124.094,100.584-224.678,224.662-224.678s224.678,100.584,224.678,224.678Z"/>
+  </g>
+</svg>

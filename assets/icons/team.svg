@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="logos" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#outer-glow-2);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 25px;
+      }
+    </style>
+    <filter id="outer-glow-2" x="69" y="165" width="919" height="721" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="26"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="team" class="cls-1">
+    <g id="center">
+      <rect class="cls-2" x="427.672" y="255.833" width="197.669" height="255.997" rx="98.834" ry="98.834"/>
+      <path class="cls-2" d="M751.179,794.837h-449.34c0-124.094,100.584-224.678,224.662-224.678s224.678,100.584,224.678,224.678Z"/>
+    </g>
+    <g id="right">
+      <circle class="cls-2" cx="774.402" cy="477.265" r="60.489"/>
+      <path class="cls-2" d="M706.19,589.113c14.17-4.591,29.29-7.072,44.989-7.072,80.535,0,145.821,65.286,145.821,145.821"/>
+    </g>
+    <g id="left">
+      <circle class="cls-2" cx="282.931" cy="477.265" r="60.489"/>
+      <path class="cls-2" d="M351.143,589.113c-14.17-4.591-29.29-7.072-44.989-7.072-80.535,0-145.821,65.286-145.821,145.821"/>
+    </g>
+  </g>
+</svg>
