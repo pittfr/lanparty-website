@@ -1,3 +1,12 @@
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 .container{
     width: 100%;
     cursor: default;
@@ -12,7 +21,7 @@
         position: relative;
         overflow: hidden;
     
-        .video-container {
+        .video-container{
             position: absolute;
             top: 0;
             left: 0;
@@ -20,6 +29,8 @@
             height: 100%;
             z-index: -1;
             overflow: hidden;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
         }
 
         .video-container::before {
