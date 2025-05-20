@@ -37,6 +37,7 @@
                 align-items: center;
                 white-space: nowrap;
                 position: relative;
+                box-shadow: 0 0 20px 5px var(--secondary-element-color);
 
                 span.spots-left{
                     display: block;
@@ -112,15 +113,52 @@
                         flex-direction: row;
                         gap: 0.5rem;
                         margin-bottom: 1rem;
-                        
     
                         a{
                             width: 100%;
                             font-size: clamp(14px, 1.5vw, 24px);
-                            background: red;
                             text-align: center;
                             padding: 0.5rem;
                             border-radius: 0.5rem;
+                            position: relative;
+                            color: var(--primary-text-color);
+                            background-clip: padding-box;
+                            background-color: var(--element-color);
+                            z-index: 1;
+                        }
+                        
+                        a::before{
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            min-width: 100%;
+                            height: 100%;
+                            translate: -50% -50%;
+                            background: linear-gradient(25deg, var(--primary-color) -10%, var(--secondary-color) 100%);
+                            border-radius: 0.5rem;
+                            padding: 2px;
+                            z-index: -2;
+                        }
+
+                        a::after{
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            min-width: 100%;
+                            height: 100%;
+                            translate: -50% -50%;
+                            background: linear-gradient(25deg, var(--primary-color) 30%, var(--secondary-color) 130%);
+                            border-radius: 0.5rem;
+                            padding: 2px;
+                            opacity: 0;
+                            transition: opacity 0.3s ease-in-out;
+                            z-index: -1;
+                        }
+
+                        a:hover::after{
+                            opacity: 1;
                         }
     
                         .join-game{
