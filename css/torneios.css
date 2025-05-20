@@ -171,6 +171,29 @@
                     }
                 }
             }
+
+            li.game-card.full{
+                background-color: #64282f;
+                box-shadow: 0 0 20px 5px #782a31;
+
+                span.spots-left{
+                    background-color: #9b1a25;
+                    border: 1px solid red;
+                }
+
+                .game-details{
+                    a{
+                        background-color: #9b1a25;
+                        border: 1px solid red;
+                    }
+                    a::before, a::after{
+                        display: none;
+                    }
+                    .join-game{
+                        display: none;
+                    }
+                }
+            }
         }
     }
 }
@@ -232,7 +255,7 @@
             margin-right: 0 !important;
 
             span.spots-left{
-                font-size: clamp(12px, 3vw, 20px);
+                font-size: clamp(10px, 2.5vw, 18px);
             }
 
             .game-details{
