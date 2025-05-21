@@ -8,8 +8,42 @@
     <link rel="stylesheet" href="css/torneios.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
+
+    <script src="js/nav.js" defer></script>
 </head>
 <body>
+    <header class="primary-header">
+
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+        </button>
+
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="assets/images/lanparty-logo.png" alt="" class="logo">
+            </a>
+        </div>
+
+        <nav>
+            <ul data-visible="false" id="primary-navigation" class="nav-links">
+                <li>
+                    <a href="index.html">Início</a>
+                </li>
+                <li class="active">
+                    <a href="torneios.html">Torneios</a>
+                </li>
+                <li>
+                    <a href="#">Horários</a>
+                </li>
+                <li>
+                    <a href="#">Staff</a>
+                </li>
+                <li class="sign-in">
+                    <a href="#">Sign In</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
         <div class="title">
             <h1>TORNEIOS</h1>

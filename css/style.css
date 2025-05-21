@@ -16,6 +16,7 @@
     --element-color: #10101d;
     --secondary-element-color: #252536;
     --footer-color: #0a0a1c;
+    --navbar-color: #18182a;
 }
 
 html, body{
@@ -26,6 +27,7 @@ html, body{
 body{
     color: var(--primary-text-color);
     background: var(--background-color);
+    overflow-x: hidden;
 }
 
 button{
@@ -40,4 +42,9 @@ button{
     align-items: center;
     flex-direction: column;
     font-size: 14px;
+}
+
+.sr-only {
+    color: transparent;
+    user-select: none;
 }

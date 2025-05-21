@@ -1,7 +1,7 @@
 .container{
     display: flex;
     flex-direction: column;
-    padding: clamp(1rem, 10vh, 10rem) clamp(1rem, 10vw, 10rem);
+    padding: clamp(1rem, 15vh, 10rem) clamp(1rem, 10vw, 10rem);
     width: 100%;
     margin-bottom: 2rem;
 
@@ -124,6 +124,7 @@
                             color: var(--primary-text-color);
                             background-clip: padding-box;
                             background-color: var(--element-color);
+                            text-decoration: none;
                             z-index: 1;
                         }
                         

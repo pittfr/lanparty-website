@@ -8,27 +8,44 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
+    
+    <script src="js/countdown.js" defer></script>
+    <script src="js/load-featured-games.js" defer></script>
+    <script src="js/nav.js" defer></script>
 </head>
 <body>
-    <!-- <nav class="navbar">
-            <ul class="nav-links">
-                <li class="nav-link">
-                    <a href="#">Início</a>
+    <header class="primary-header">
+
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+        </button>
+
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="assets/images/lanparty-logo.png" alt="" class="logo">
+            </a>
+        </div>
+
+        <nav>
+            <ul data-visible="false" id="primary-navigation" class="nav-links">
+                <li class="active">
+                    <a href="index.html">Início</a>
                 </li>
-                <li class="nav-link">
-                    <a href="#">Jogos</a>
+                <li>
+                    <a href="torneios.html">Torneios</a>
                 </li>
-                <li class="nav-link">
+                <li>
                     <a href="#">Horários</a>
                 </li>
-                <li class="nav-link">
+                <li>
                     <a href="#">Staff</a>
                 </li>
-                <li class="nav-link sign-in">
+                <li class="sign-in">
                     <a href="#">Sign In</a>
                 </li>
             </ul>
-    </nav> -->
+        </nav>
+    </header>
     <div class="container">
         <div class="hero-container">
             <div class="video-container">
@@ -134,7 +151,5 @@
         </div>
     </footer>
 
-    <script src="js/countdown.js"></script>
-    <script src="js/load-featured-games.js"></script>
 </body>
 </html>
