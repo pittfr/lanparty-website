@@ -110,8 +110,11 @@
     .mobile-nav-toggle{
         display: block;
         background: grey;
+        -webkit-mask-image: url("../assets/icons/burger.svg");
         mask-image: url("../assets/icons/burger.svg");
+        -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
+        -webkit-mask-size: cover;
         mask-size: cover;
         width: 2rem;
         aspect-ratio: 1;
@@ -120,6 +123,7 @@
     }
 
     .mobile-nav-toggle[aria-expanded='true']{
+        -webkit-mask-image: url(../assets/icons/close.svg);
         mask-image: url(../assets/icons/close.svg);
     }
 
