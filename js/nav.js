@@ -11,4 +11,9 @@ navToggle.addEventListener('click', () => {
         primaryNav.setAttribute('data-visible', false);
         navToggle.setAttribute('aria-expanded', false);
     }
+
+    primaryNav.classList.add("nav-animating");
+    setTimeout(() => {
+        primaryNav.classList.remove("nav-animating");
+    }, 300);
 })
