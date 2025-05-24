@@ -1,0 +1,126 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1rem, 15vh, 10rem) clamp(1rem, 6vw, 6rem);
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.container .title h1{
+    margin-bottom: 0;
+}
+
+.team-category{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-category:not(.active), .subcategory:not(.active){
+    display: none;
+}
+
+.subcategory{
+    width: 100%;
+    margin-top: 1rem;
+    padding: min(2rem, 2vw);
+    border-radius: 0.5rem;
+    background-color: var(--secondary-element-color);
+    box-shadow: 0 0 20px 2px var(--secondary-element-color);
+    font-size: clamp(20px, 1.5vw, 30px);
+}
+
+.subcategory h2{
+    text-align: center;
+    font-weight: 650;
+    margin-bottom: 2vw;
+}
+
+.coordinator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: inherit;
+    margin-bottom: 2vw;
+}
+
+.members-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gap, min(2rem, 1vw));
+    padding: 0 min(3rem, 2.5vw);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(12px, 1vw, 18px);
+    white-space: nowrap;
+    gap: 1rem;
+}
+
+.card .avatar{
+    width: clamp(100px, 10vw, 135px);
+    aspect-ratio: 1/1;
+}
+
+.coordinator .avatar{
+    width: fit-content;
+    aspect-ratio: 1/1;
+    position: relative;
+}
+
+.coordinator .avatar img{
+    width: 100%;
+    height: 100%;
+}
+
+.coordinator .avatar::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    translate: -50% -50%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.coordinator .avatar::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    translate: -50% -50%;
+    background-color: rgb(255, 255, 255);
+    -webkit-mask-image: url(../assets/icons/mail.svg);
+    mask-image: url(../assets/icons/mail.svg);
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mask-size: 50%;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.coordinator .avatar:hover{
+    cursor: pointer;
+}
+
+.coordinator .avatar:hover::before{
+    opacity: 0.6;
+}
+
+.coordinator .avatar:hover::after{
+    opacity: 0.8;
+}

@@ -6,11 +6,6 @@
     margin-bottom: 2rem;
 }
 
-.container .title h1{
-    font-size: clamp(50px, 10vw, 120px);
-    margin-bottom: clamp(1rem, 8vh, 10rem);
-}
-
 .container .games-container{
     width: 100%;
     display: flex;
