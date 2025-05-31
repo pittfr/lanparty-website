@@ -163,7 +163,7 @@
     z-index: -1;
 }
     
-.hero-container .home-buttons.register:hover::after, .view-games:hover::after{
+.home-buttons .register:hover::after, .home-buttons .view-games:hover::after{
     opacity: 1;
 }
 
