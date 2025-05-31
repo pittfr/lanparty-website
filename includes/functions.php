@@ -4,4 +4,8 @@
         return ($page == $name) ? "class='active'" : "";
     }
 
+    function gameThumbnail ($file){
+        $path = "assets/images/games/$file";
+        return $path;
+    }
 ?>
