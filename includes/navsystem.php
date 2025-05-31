@@ -1,3 +1,3 @@
 <?php
-    include "$page.php";
+    include "pages/$page.php";
 ?>
