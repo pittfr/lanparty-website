@@ -32,7 +32,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     width: calc(100% - 20px);
     height: calc(100% - 20px);
     background: linear-gradient(45deg, var(--primary-color) -30%, var(--secondary-color) 80%);
