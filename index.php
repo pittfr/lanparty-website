@@ -21,7 +21,6 @@
         $page = "home";
     }
 
-    require "includes/functions.php";
     
     $pageSpecificCSS = [];
     $pageSpecificJS = [];
@@ -40,6 +39,9 @@
             $pageSpecificJS[] = "js/staff.js";
             break;
     }
+                
+    require_once "includes/functions.php";
+    require_once "includes/connect.php";
 ?>
 
 <head>
@@ -72,4 +74,9 @@
     ?>
 
 </body>
+
+<?php
+    $db->close();
+?>
+
 </html>
