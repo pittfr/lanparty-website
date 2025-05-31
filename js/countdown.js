@@ -3,7 +3,9 @@ const hours = document.querySelector(".countdown .hours");
 const minutes = document.querySelector(".countdown .minutes");
 const seconds = document.querySelector(".countdown .seconds");
 
-const targetDate = "2025-12-25"; // (YYYY-MM-DD)
+const targetDate = EVENT_DATE; // (YYYY-MM-DD)
+
+console.log(targetDate);
 
 function updateCountdown() {
     const now = new Date();

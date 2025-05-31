@@ -2,6 +2,9 @@
 <html lang="pt-pt">
 
 <?php
+    require_once "includes/functions.php";
+    require_once "includes/connect.php";
+
     if(isset($_GET['page'])){
         switch ($_GET['page']){
             case "home":
@@ -30,6 +33,12 @@
             $pageSpecificCSS[] = "css/home.css";
             $pageSpecificJS[] = "js/countdown.js";
             $pageSpecificJS[] = "js/load-featured-games.js";
+
+            $eventDateQuery = $db->query("SELECT valor FROM definicoes WHERE chave='lanparty_data'");
+            
+            if($eventDateQuery && $eventDateQuery->num_rows > 0){
+                $eventDate = $eventDateQuery->fetch_assoc()['valor'];
+            }
             break;
         case "torneios":
             $pageSpecificCSS[] = "css/torneios.css";
@@ -39,9 +48,6 @@
             $pageSpecificJS[] = "js/staff.js";
             break;
     }
-                
-    require_once "includes/functions.php";
-    require_once "includes/connect.php";
 ?>
 
 <head>
@@ -58,6 +64,10 @@
     <?php endforeach; ?>
     
     <script src="js/nav.js" defer></script>
+
+    <script>
+        const EVENT_DATE = "<?php echo $eventDate;?>";
+    </script>
     
     <?php foreach($pageSpecificJS as $js): ?>
     <script src="<?php echo $js; ?>" defer></script>
