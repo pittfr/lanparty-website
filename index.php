@@ -4,6 +4,7 @@
 <?php
     require_once "includes/functions.php";
     require_once "includes/connect.php";
+    require_once "includes/login.php";
 
     if(isset($_GET['page'])){
         switch ($_GET['page']){
