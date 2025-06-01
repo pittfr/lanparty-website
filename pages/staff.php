@@ -69,7 +69,7 @@
                         
                         // show coordinator for this subcategory
                         $coordinatorQuery = $db->query("
-                            SELECT u.id, u.username, u.imagem, u.email
+                            SELECT u.id, u.username, u.email
                             FROM membrostaff m
                             JOIN utilizadores u ON m.id_utilizador = u.id
                             WHERE m.id_subcategoria = {$subcategory['id']}
@@ -84,9 +84,7 @@
                                     <div class='person'>
                                         <div class='avatar'>";
                             
-                            $imagePath = !empty($coordinator['imagem']) ? 
-                                         "assets/images/staff/{$coordinator['imagem']}" : 
-                                         "https://randomuser.me/api/portraits/men/1.jpg";
+                            $imagePath = getUserImage($coordinator['id']);
                             
                             echo "<img src='{$imagePath}' alt='{$coordinator['username']}'>";
                             
@@ -101,7 +99,7 @@
                         
                         // show members for this subcategory
                         $membersQuery = $db->query("
-                            SELECT u.id, u.username, u.imagem
+                            SELECT u.id, u.username
                             FROM membrostaff m
                             JOIN utilizadores u ON m.id_utilizador = u.id
                             WHERE m.id_subcategoria = {$subcategory['id']}
@@ -113,9 +111,7 @@
                             echo "<div class='members-grid'>";
                             
                             while ($member = $membersQuery->fetch_assoc()) {
-                                $imagePath = !empty($member['imagem']) ? 
-                                             "assets/images/staff/{$member['imagem']}" : 
-                                             "https://randomuser.me/api/portraits/men/" . rand(1, 50) . ".jpg";
+                                $imagePath = getUserImage($member['id']);
                                 
                                 echo "<div class='card'>
                                         <div class='person'>

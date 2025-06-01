@@ -8,4 +8,8 @@
         $path = "assets/images/games/$file";
         return $path;
     }
+
+    function getUserImage ($id){
+        $path = "assets/images/users/$id.webp";
+    }
 ?>
