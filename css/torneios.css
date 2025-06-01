@@ -197,6 +197,14 @@ li.game-card.full .game-details .join-game{
     display: none;
 }
 
+h1.warning{
+    color: #747474;
+    margin-top: 15vh;
+    margin-bottom: 30vh;
+    font-size: clamp(20px, 3vw, 35px);
+    white-space: nowrap;
+}
+
 
 @media (max-width: 1000px){
     ul.games{

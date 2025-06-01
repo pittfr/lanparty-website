@@ -3,7 +3,7 @@
         <h1>TORNEIOS</h1>
     </div>
     <div class="games-container">
-        <ul class="games">
+        
 
             <?php
                 $q = "SELECT j.nome, j.imagem, j.genero, j.membros, (t.vagas - COUNT(e.id)) AS vagas_livres FROM torneios t JOIN jogos j on t.id_jogo = j.id LEFT JOIN equipas e on e.id_torneio = t.id GROUP BY j.nome, j.imagem, j.genero, j.membros";
@@ -17,6 +17,7 @@
                         echo "<h1 class='warning'>Nenhum torneio encontrado</h1>";
                     }else{
                         while($reg = $procura->fetch_object()){
+                            echo "<ul class='games'>";
                             $t = gameThumbnail($reg->imagem);
                             if ($reg->vagas_livres == 0){
                                 echo "<li class='game-card full'>";
@@ -47,6 +48,5 @@
                     }
                 }
             ?>
-        </ul>
     </div>
 </div>
