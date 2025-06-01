@@ -21,12 +21,19 @@
             <li <?php echo isActivePage("staff"); ?>>
                 <a href="?page=staff">Staff</a>
             </li>
-            <li class="profile">
-                <a href="?page=profile"><img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Profile"></a>
-            </li>
-            <!-- <li class="sign-in">
-                <a href="?page=login">Sign In</a>
-            </li> -->
+            <?php
+                if(empty($_SESSION['username'])){
+                    echo "<li class='sign-in'>";
+                    echo "<a href='?page=login'>Iniciar sessão</a>";
+                    echo "</li>";
+                }else{
+                    $userId = $_SESSION['user_id'];
+                    $profilePicture = getUserImage($userId);
+                    echo "<li class='profile'>";
+                    echo "<a href='?page=profile'><img src='$profilePicture' alt='Profile'></a>";
+                    echo "</li>";
+                }
+            ?>
         </ul>
     </nav>
 </header>

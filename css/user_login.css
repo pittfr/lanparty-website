@@ -1,0 +1,77 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1rem, 25dvh, 20rem) clamp(1rem, 10vw, 10rem);
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.login-wrapper{
+    width: clamp(300px, 70vw, 500px);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 2rem;
+    background: var(--element-color);
+    box-shadow: 0 0 10px 5px var(--secondary-element-color);
+}
+
+.login-wrapper form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.login-wrapper h2{
+    font-size: clamp(30px, calc(3vw + 10px), 40px);
+    white-space: nowrap;
+    margin: 1em 0;
+}
+
+.login-wrapper input[type="text"],
+.login-wrapper input[type="password"] {
+    width: 80%;
+    padding: 0.75em 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px var(--secondary-element-color);
+    color: var(--primary-text-color);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: var(--secondary-element-color);
+    transition: border-color 0.2s;
+}
+
+.login-wrapper input[type="text"]:focus,
+.login-wrapper input[type="password"]:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+.login-wrapper input[type="submit"]{
+    margin: 1em 0;
+    width: 70%;
+    font-size: 1.2rem;
+    color: var(--primary-text-color);
+    font-weight: 500;
+    padding: 0.5em;
+    border-radius: 2rem;
+    background: linear-gradient(25deg, var(--primary-color) 30%, var(--secondary-color) 130%);
+    border: none;
+    outline: none;
+}
+
+.login-wrapper input[type="submit"]:hover{
+    cursor: pointer;
+}
+
+.login-wrapper a{
+    margin-top: 0.5em;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-decoration: none;
+}

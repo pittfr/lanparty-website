@@ -11,6 +11,7 @@
 
     function getUserImage ($id){
         $path = "assets/images/users/$id.webp";
+        return $path;
     }
 
     function msgSuccess ($m){

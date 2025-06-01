@@ -17,6 +17,9 @@
             case "staff":
                 $page = "staff";
                 break;
+            case "login":
+                $page = "login";
+                break;
             default:
                 $page = "home";
                 break;
@@ -47,6 +50,9 @@
         case "staff":
             $pageSpecificCSS[] = "css/staff.css";
             $pageSpecificJS[] = "js/staff.js";
+            break;
+        case "login":
+            $pageSpecificCSS[] = "css/user_login.css";
             break;
     }
 ?>
@@ -81,15 +87,15 @@
     ?>
     <ul id="user-messages">
         <?php
-            echo msgSuccess("Tarefa realizada com sucesso!");
-            echo msgWarning("Tarefa realizada com aviso!");
-            echo msgError("Tarefa realizada com erro!");
+            // echo msgSuccess("Tarefa realizada com sucesso!");
+            // echo msgWarning("Tarefa realizada com aviso!");
+            // echo msgError("Tarefa realizada com erro!");
         ?>
     </ul>
         
     <?php
         include "includes/navsystem.php";
-
+        
         require "footer.php";
     ?>
 
