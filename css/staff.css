@@ -42,16 +42,24 @@
 .category-tabs label, 
 .subcategory-tabs label {
     padding: 10px;
-    font-size: clamp(20px, 2vw, 30px);
     font-weight: 350;
     color: var(--secondary-text-color);
-    width: 250px;
     position: relative;
     transition: color 100ms ease-in-out;
     text-align: center;
     cursor: pointer;
     display: inline-block;
     white-space: nowrap;
+}
+
+.category-tabs label{
+    font-size: clamp(20px, 2vw, 30px);
+    width: 250px;
+}
+
+.subcategory-tabs label{
+    font-size: clamp(15px, 1.5vw, 25px);
+    width: 200px;
 }
 
 .category-tabs label::before, 
@@ -241,6 +249,14 @@
         -webkit-overflow-scrolling: touch;
         gap: 1rem;
         position: relative;
+    }
+
+    .category-tabs{
+        margin-bottom: 0.5rem;
+    }
+
+    .tabs-wrapper{
+        margin-bottom: 0.5rem;
     }
     
     .category-tabs::-webkit-scrollbar, .subcategory-tabs::-webkit-scrollbar {

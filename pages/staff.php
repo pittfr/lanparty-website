@@ -3,336 +3,144 @@
         <h1>STAFF</h1>
     </div>
 
-    <div class="tabs-wrapper">
-        <div class="category-tabs">
-            <input type="radio" name="category" id="radio-comunicacao" value="comunicacao" checked>
-            <label for="radio-comunicacao">Comunicação</label>
-
-            <input type="radio" name="category" id="radio-torneios" value="torneios">
-            <label for="radio-torneios">Torneios</label>
-
-            <input type="radio" name="category" id="radio-it" value="it">
-            <label for="radio-it">IT</label>
-
-            <input type="radio" name="category" id="radio-planeamento" value="planeamento">
-            <label for="radio-planeamento">Planeamento</label>
-
-            <input type="radio" name="category" id="radio-suporte" value="suporte">
-            <label for="radio-suporte">Suporte</label>
-
-        </div>
-    </div>
-
-    <div class="category active" id="comunicacao">
-        <div class="tabs-wrapper">
-            <div class="subcategory-tabs">
-                <input type="radio" id="radio-social-media" name="comunicacao-sub" value="social-media" checked>
-                <label for="radio-social-media">Social Media</label>
-
-                <input type="radio" id="radio-reports" name="comunicacao-sub" value="reports">
-                <label for="radio-reports">Reportagem</label>
-            </div>
-        </div>
-
-        <div class="subcategory active" id="social-media">
-            <div class="card coordinator">
-                <div class="person">
-                    <div class="avatar">
-                        <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Sofia Martins">
-                    </div>
-                    <div class="person-info">
-                        <h3>Sofia Martins</h3>
-                        <h5>Coordenador</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="members-grid">
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="João Silva">
-                        </div>
-                        <div class="person-info">
-                            <h3>João Silva</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Ana Santos">
-                        </div>
-                        <div class="person-info">
-                            <h3>Ana Santos</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Miguel Costa">
-                        </div>
-                        <div class="person-info">
-                            <h3>Miguel Costa</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/women/5.jpg" alt="Carolina Oliveira">
-                        </div>
-                        <div class="person-info">
-                            <h3>Carolina Oliveira</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/men/6.jpg" alt="André Ferreira">
-                        </div>
-                        <div class="person-info">
-                            <h3>André Ferreira</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-                    
-            </div>
-        </div>
+    <?php
+        // get all categories
+        $categories = [];
+        $categoriesQuery = $db->query("SELECT id, nome, lowercase FROM categoriasstaff ORDER BY id");
         
-        <div class="subcategory" id="reports">
-            <div class="card coordinator">
-                <div class="person">
-                    <div class="avatar">
-                        <img src="https://randomuser.me/api/portraits/women/7.jpg" alt="Mariana Pereira">
-                    </div>
-                    <div class="person-info">
-                        <h3>Mariana Pereira</h3>
-                        <h5>Coordenador</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="members-grid">
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/men/8.jpg" alt="Pedro Almeida">
-                        </div>
-                        <div class="person-info">
-                            <h3>Pedro Almeida</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/women/9.jpg" alt="Beatriz Rodrigues">
-                        </div>
-                        <div class="person-info">
-                            <h3>Beatriz Rodrigues</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="Tiago Fernandes">
-                        </div>
-                        <div class="person-info">
-                            <h3>Tiago Fernandes</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/women/11.jpg" alt="Inês Carvalho">
-                        </div>
-                        <div class="person-info">
-                            <h3>Inês Carvalho</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Rafael Gomes">
-                        </div>
-                        <div class="person-info">
-                            <h3>Rafael Gomes</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="category" id="torneios">
-        <div class="tabs-wrapper">
-            <div class="subcategory-tabs">
-                <input type="radio" id="radio-fc25" name="torneios-sub" value="fc25" checked>
-                <label for="radio-fc25">FC25</label>
-
-                <input type="radio" id="radio-fortnite" name="torneios-sub" value="fortnite">
-                <label for="radio-fortnite">Fortnite</label>
-            </div>
-        </div>
-
-        <div class="subcategory active" id="fc25">
-            <div class="card coordinator">
-                <div class="person">
-                    <div class="avatar">
-                        <img src="https://randomuser.me/api/portraits/men/31.jpg" alt="Rui Moreira">
-                    </div>
-                    <div class="person-info">
-                        <h3>Rui Moreira</h3>
-                        <h5>Coordenador</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="members-grid">
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sandra Teixeira">
-                        </div>
-                        <div class="person-info">
-                            <h3>Sandra Teixeira</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Luís Ferreira">
-                        </div>
-                        <div class="person-info">
-                            <h3>Luís Ferreira</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/women/34.jpg" alt="Raquel Moura">
-                        </div>
-                        <div class="person-info">
-                            <h3>Raquel Moura</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Marco Alves">
-                        </div>
-                        <div class="person-info">
-                            <h3>Marco Alves</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/women/36.jpg" alt="Helena Campos">
-                        </div>
-                        <div class="person-info">
-                            <h3>Helena Campos</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="subcategory" id="fortnite">
-            <div class="card coordinator">
-                <div class="person">
-                    <div class="avatar">
-                        <img src="https://randomuser.me/api/portraits/men/37.jpg" alt="Eduardo Vieira">
-                    </div>
-                    <div class="person-info">
-                        <h3>Eduardo Vieira</h3>
-                        <h5>Coordenador</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="members-grid">
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/women/38.jpg" alt="Cláudia Rocha">
-                        </div>
-                        <div class="person-info">
-                            <h3>Cláudia Rocha</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/men/39.jpg" alt="Alexandre Coelho">
-                        </div>
-                        <div class="person-info">
-                            <h3>Alexandre Coelho</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/women/40.jpg" alt="Patrícia Lima">
-                        </div>
-                        <div class="person-info">
-                            <h3>Patrícia Lima</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Tomás Abreu">
-                        </div>
-                        <div class="person-info">
-                            <h3>Tomás Abreu</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="person">
-                        <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/women/42.jpg" alt="Susana Morgado">
-                        </div>
-                        <div class="person-info">
-                            <h3>Susana Morgado</h3>
-                            <h5>Membro</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        if (!$categoriesQuery) {
+            echo "<h1 class='warning'>Erro ao carregar categorias!</h1>";
+        } else if ($categoriesQuery->num_rows == 0) {
+            echo "<h1 class='warning'>Nenhuma categoria encontrada</h1>";
+        } else {
+            
+            while ($category = $categoriesQuery->fetch_assoc()) {
+                $categories[] = $category;
+            }
+            
+            // generate category tabs
+            echo "<div class='tabs-wrapper'><div class='category-tabs'>";
+            foreach ($categories as $index => $category) {
+                $checked = ($index == 0) ? " checked" : "";
+                echo "<input type='radio' name='category' id='radio-{$category['lowercase']}' 
+                      value='{$category['lowercase']}'{$checked}>";
+                echo "<label for='radio-{$category['lowercase']}'>{$category['nome']}</label>";
+            }
+            echo "</div></div>";
+            
+            // generate category content containers
+            foreach ($categories as $index => $category) {
+                $activeClass = ($index == 0) ? " active" : "";
+                echo "<div class='category{$activeClass}' id='{$category['lowercase']}'>";
+                
+                // get subcategories for this category
+                $subcategoriesQuery = $db->query("SELECT id, nome, lowercase 
+                                                 FROM subcategoriasstaff 
+                                                 WHERE id_categoria = {$category['id']} 
+                                                 ORDER BY id");
+                
+                if (!$subcategoriesQuery) {
+                    echo "<h1 class='warning'>Erro ao carregar subcategorias!</h1>";
+                } else if ($subcategoriesQuery->num_rows == 0) {
+                    echo "<h1 class='warning'>Nenhuma subcategoria encontrada para {$category['nome']}</h1>";
+                } else {
+                    // generate subcategory tabs
+                    echo "<div class='tabs-wrapper'><div class='subcategory-tabs'>";
+                    $firstSubcategory = true;
+                    $subcategories = [];
+                    
+                    while ($subcategory = $subcategoriesQuery->fetch_assoc()) {
+                        $subcategories[] = $subcategory;
+                        $checked = ($firstSubcategory) ? " checked" : "";
+                        
+                        echo "<input type='radio' id='radio-{$subcategory['lowercase']}' 
+                              name='{$category['lowercase']}-sub' 
+                              value='{$subcategory['lowercase']}'{$checked}>";
+                        echo "<label for='radio-{$subcategory['lowercase']}'>{$subcategory['nome']}</label>";
+                        
+                        $firstSubcategory = false;
+                    }
+                    echo "</div></div>";
+                    
+                    // generate subcategory content containers
+                    foreach ($subcategories as $subIndex => $subcategory) {
+                        $activeClass = ($subIndex == 0) ? " active" : "";
+                        echo "<div class='subcategory{$activeClass}' id='{$subcategory['lowercase']}'>";
+                        
+                        // show coordinator for this subcategory
+                        $coordinatorQuery = $db->query("
+                            SELECT u.id, u.username, u.imagem, u.email
+                            FROM membrostaff m
+                            JOIN utilizadores u ON m.id_utilizador = u.id
+                            WHERE m.id_subcategoria = {$subcategory['id']}
+                            AND m.tipo = 'coordenador'
+                            LIMIT 1
+                        ");
+                        
+                        if ($coordinatorQuery && $coordinatorQuery->num_rows > 0) {
+                            $coordinator = $coordinatorQuery->fetch_assoc();
+                            
+                            echo "<div class='card coordinator'>
+                                    <div class='person'>
+                                        <div class='avatar'>";
+                            
+                            $imagePath = !empty($coordinator['imagem']) ? 
+                                         "assets/images/staff/{$coordinator['imagem']}" : 
+                                         "https://randomuser.me/api/portraits/men/1.jpg";
+                            
+                            echo "<img src='{$imagePath}' alt='{$coordinator['username']}'>";
+                            
+                            echo "</div>
+                                <div class='person-info'>
+                                    <h3>{$coordinator['username']}</h3>
+                                    <h5>Coordenador</h5>
+                                </div>
+                            </div>
+                          </div>";
+                        }
+                        
+                        // show members for this subcategory
+                        $membersQuery = $db->query("
+                            SELECT u.id, u.username, u.imagem
+                            FROM membrostaff m
+                            JOIN utilizadores u ON m.id_utilizador = u.id
+                            WHERE m.id_subcategoria = {$subcategory['id']}
+                            AND m.tipo = 'membro'
+                            ORDER BY u.username
+                        ");
+                        
+                        if ($membersQuery && $membersQuery->num_rows > 0) {
+                            echo "<div class='members-grid'>";
+                            
+                            while ($member = $membersQuery->fetch_assoc()) {
+                                $imagePath = !empty($member['imagem']) ? 
+                                             "assets/images/staff/{$member['imagem']}" : 
+                                             "https://randomuser.me/api/portraits/men/" . rand(1, 50) . ".jpg";
+                                
+                                echo "<div class='card'>
+                                        <div class='person'>
+                                            <div class='avatar'>
+                                                <img src='{$imagePath}' alt='{$member['username']}'>
+                                            </div>
+                                            <div class='person-info'>
+                                                <h3>{$member['username']}</h3>
+                                                <h5>Membro</h5>
+                                            </div>
+                                        </div>
+                                      </div>";
+                            }
+                            
+                            echo "</div>"; // close members-grid
+                        } else {
+                            echo "<p>Nenhum membro encontrado para esta subcategoria.</p>";
+                        }
+                        
+                        echo "</div>"; // close subcategory
+                    }
+                }
+                
+                echo "</div>"; // close category
+            }
+        }
+    ?>
 </div>
