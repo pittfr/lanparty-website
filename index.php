@@ -77,7 +77,16 @@
     
     <?php
         require "header.php";
-
+    ?>
+    <ul id="user-messages">
+        <?php
+            echo msgSuccess("Tarefa realizada com sucesso!");
+            echo msgWarning("Tarefa realizada com aviso!");
+            echo msgError("Tarefa realizada com erro!");
+        ?>
+    </ul>
+        
+    <?php
         include "includes/navsystem.php";
 
         require "footer.php";
