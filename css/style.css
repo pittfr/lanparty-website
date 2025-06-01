@@ -49,7 +49,7 @@ button{
 
 .container .title h1{
     font-size: clamp(50px, 10vw, 120px);
-    margin-bottom: clamp(1rem, 8vh, 10rem);
+    margin-bottom: clamp(1rem, 8dvh, 10rem);
 }
 
 .sr-only {
@@ -64,9 +64,9 @@ button{
     align-items: center;
     position: fixed;
     right: 20px;
-    top: calc((10vh) + 20px);
+    top: calc((10dvh) + 20px);
     width: 305px;
-    height: 50vh;
+    height: 50dvh;
     gap: 10px;
     z-index: 1000;
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 55%);

@@ -1,7 +1,7 @@
 .container{
     display: flex;
     flex-direction: column;
-    padding: clamp(1rem, 15vh, 10rem) clamp(1rem, 10vw, 10rem);
+    padding: clamp(1rem, 15dvh, 10rem) clamp(1rem, 10vw, 10rem);
     width: 100%;
     margin-bottom: 2rem;
 }
@@ -199,8 +199,8 @@ li.game-card.full .game-details .join-game{
 
 h1.warning{
     color: #747474;
-    margin-top: 15vh;
-    margin-bottom: 30vh;
+    margin-top: 15dvh;
+    margin-bottom: 30dvh;
     font-size: clamp(20px, 3vw, 35px);
     white-space: nowrap;
 }

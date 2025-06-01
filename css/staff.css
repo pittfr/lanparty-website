@@ -1,7 +1,7 @@
 .container{
     display: flex;
     flex-direction: column;
-    padding: clamp(1rem, 15vh, 10rem) clamp(1rem, 6vw, 6rem);
+    padding: clamp(1rem, 15dvh, 10rem) clamp(1rem, 6vw, 6rem);
     width: 100%;
     margin-bottom: 2rem;
 }
@@ -27,7 +27,7 @@
     align-items: center;
     gap: 2rem;
     width: 90%;
-    margin-bottom: clamp(1rem, 4vh, 2rem);
+    margin-bottom: clamp(1rem, 4dvh, 2rem);
 }
 
 .subcategory-tabs{
