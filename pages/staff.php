@@ -84,9 +84,7 @@
                                     <div class='person'>
                                         <div class='avatar'>";
                             
-                            $imagePath = !empty($coordinator['imagem']) ? 
-                                         "assets/images/staff/{$coordinator['imagem']}" : 
-                                         "https://randomuser.me/api/portraits/men/1.jpg";
+                            $imagePath = getUserImage($coordinator['id']);
                             
                             echo "<img src='{$imagePath}' alt='{$coordinator['username']}'>";
                             
@@ -113,9 +111,7 @@
                             echo "<div class='members-grid'>";
                             
                             while ($member = $membersQuery->fetch_assoc()) {
-                                $imagePath = !empty($member['imagem']) ? 
-                                             "assets/images/staff/{$member['imagem']}" : 
-                                             "https://randomuser.me/api/portraits/men/" . rand(1, 50) . ".jpg";
+                                $imagePath = getUserImage($member['id']);
                                 
                                 echo "<div class='card'>
                                         <div class='person'>
