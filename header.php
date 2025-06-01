@@ -21,9 +21,12 @@
             <li <?php echo isActivePage("staff"); ?>>
                 <a href="?page=staff">Staff</a>
             </li>
-            <li class="sign-in">
-                <a href="#">Sign In</a>
+            <li class="profile">
+                <a href="?page=profile"><img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Profile"></a>
             </li>
+            <!-- <li class="sign-in">
+                <a href="?page=login">Sign In</a>
+            </li> -->
         </ul>
     </nav>
 </header>
