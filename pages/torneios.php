@@ -16,8 +16,8 @@
                     if($procura->num_rows == 0){
                         echo "<h1 class='warning'>Nenhum torneio encontrado</h1>";
                     }else{
+                        echo "<ul class='games'>";
                         while($reg = $procura->fetch_object()){
-                            echo "<ul class='games'>";
                             $t = gameThumbnail($reg->imagem);
                             if ($reg->vagas_livres == 0){
                                 echo "<li class='game-card full'>";
