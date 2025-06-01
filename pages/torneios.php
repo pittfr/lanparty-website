@@ -45,6 +45,7 @@
                             echo "<a href='#' class='view-rules'>Ver Regras</a>";
                             echo "</div>";
                         }
+                        echo "</div>";
                     }
                 }
             ?>
