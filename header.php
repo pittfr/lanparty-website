@@ -22,7 +22,7 @@
                 <a href="?page=staff">Staff</a>
             </li>
             <?php
-                if(empty($_SESSION['username'])){
+                if(empty($_SESSION['user_id'])){
                     echo "<li class='sign-in'>";
                     echo "<a href='?page=login'>Iniciar sessão</a>";
                     echo "</li>";
