@@ -138,7 +138,7 @@ h2.title{
     display: none;
 }
 
-form[action="logout.php"]{
+.option-list li:last-child form{
     display: none;
 }
 

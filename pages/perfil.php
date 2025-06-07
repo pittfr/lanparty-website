@@ -1,4 +1,10 @@
 <?php
+    if(isset($_GET['action']) && $_GET['action'] == 'logout') {
+        logout();
+        header("Location: ?page=home");
+        exit();
+    }
+
     $userId = $_SESSION['user_id'];
     
     $q = "SELECT * FROM `utilizadores` WHERE id='$userId' LIMIT 1";
@@ -16,7 +22,7 @@
     <h2 class="title">Perfil</h2>
     <div class="user-panel">
         <?php
-            $profilePicture = getUserImage($user->id, $user->image);
+            $profilePicture = getUserImage($user->id, (bool)$user->image);
 
             $regDate = DateTime::createFromFormat('Y/m/d', $user->data_registo);
             $formatedDate = $regDate ? $regDate->format('d M, Y') : $user->data_registo;
@@ -42,7 +48,7 @@
                     <label for='change-password-option'>Mudar Password</label>
                 </li>
                 <li>
-                    <form action='logout.php' method='post'>
+                    <form action='?page=perfil&action=logout' method='post'>
                         <button id='logout-button' type='submit' class='logout-button'></button>
                     </form>
                     <label for='logout-button'>Terminar sessão</label>

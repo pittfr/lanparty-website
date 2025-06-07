@@ -40,4 +40,10 @@
         $resp = "<li class='msg error'><span></span><p>$m</p></li>";
         return $resp;
     }
+
+    function logout (){
+        unset($_SESSION['user_id']);
+        unset($_SESSION['username']);
+        unset($_SESSION['tipo']);
+    }
 ?>
