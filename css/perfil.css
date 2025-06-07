@@ -1,7 +1,7 @@
 .container{
     display: flex;
     flex-direction: column;
-    padding: clamp(1rem, 15dvh, 10rem) clamp(1rem, 20vw, 20rem);
+    padding: clamp(1rem, 15dvh, 10rem) clamp(1rem, 15vw, 15rem);
     width: 100%;
     margin-bottom: 2rem;
 }
@@ -14,6 +14,7 @@ h2.title{
 .user-panel{
     width: 100%;
     display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     gap: 2rem;
@@ -285,6 +286,7 @@ form.change-info input[name="nome"]:focus{
     white-space: nowrap;
     text-transform: uppercase;
     font-weight: 600;
+    font-size: clamp(10px, calc(2vw - 10px), 12px);
 }
 
 .submit-button-wrapper{
@@ -415,4 +417,126 @@ form.change-password input[type="password"]{
 form.change-password input[type="password"]:focus{
     background-color: #1B1B2A;
     border-bottom: 2px solid var(--secondary-color);
+}
+
+@media (max-width: 1850px){
+    .container{
+        padding: clamp(1rem, 15dvh, 10rem) clamp(1rem, 10vw, 10rem);
+    }
+}
+
+@media (max-width: 1650px){
+    .container{
+        padding: clamp(1rem, 15dvh, 10rem) clamp(1rem, 5vw, 5rem);
+    }
+}
+
+@media (max-width: 1350px){
+    .container{
+        padding: clamp(1rem, 15dvh, 10rem) clamp(1rem, 2vw, 2rem);
+    }
+}
+
+@media (max-width: 1200px){
+    .user-about{
+        width: 30%;
+    }
+
+    .user-menu{
+        width: 60%;
+    }
+
+    .image-input-wrapper{
+        width: 90%;
+    }
+
+    #image{
+        width: 50%
+    }
+
+    .image-input-wrapper .input-append{
+        width: 50%;
+    }
+}
+
+@media (max-width: 900px){
+    .user-panel{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-about, .user-menu{
+        width: 80%;
+    }
+
+    #image{
+        width: 60%;
+    }
+
+    .image-input-wrapper .input-append{
+        width: 40%;
+    }
+
+    .image-input-wrapper .input-append label small{
+        font-size: clamp(10px, calc(1vw + 4px), 14px);
+    }
+
+    .user-menu h3{
+        font-size: clamp(25px, calc(4vw + 5px), 40px)
+    }
+
+    form.change-info h5{
+        font-size: clamp(20px, calc(2vw + 8px), 30px);
+    }
+
+    .info .info-row span{
+        font-size: clamp(15px, calc(3vw - 7px), 20px);
+    }
+
+    .info .info-row p{
+        font-size: clamp(13px, calc(3vw - 9px), 18px);
+    }
+}
+
+@media (max-width: 750px){
+    .info .info-row span{
+        width: 40%;
+    }
+
+    .info .info-row p{
+        width: 60%;
+    }
+}
+
+@media (max-width: 600px){
+    #image{
+        width: 50%
+    }
+
+    .image-input-wrapper .input-append{
+        width: 50%;
+    }
+
+    form.change-password input[type="password"]{
+        width: 90%;
+    }
+}
+
+@media (max-width: 550px){
+    .info .info-row span{
+        width: 30%;
+    }
+
+    .info .info-row p{
+        width: 70%;
+    }
+}
+
+@media (max-width: 500px){
+    .image-input-wrapper{
+        width: 100%;
+    }
+    form{
+        width: 100%;
+    }
 }
