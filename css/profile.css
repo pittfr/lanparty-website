@@ -1,0 +1,432 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1rem, 15dvh, 10rem) clamp(1rem, 20vw, 20rem);
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+h2.title{
+    font-size: 50px;
+    margin-bottom: 4rem;
+}
+
+.user-panel{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.user-about{
+    width: 20%;
+    height: fit-content;
+}
+
+.user-menu{
+    width: 50%;
+    padding: 1rem;
+}
+
+.user-about, .user-menu{
+    background: var(--secondary-element-color);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-about .avatar{
+    margin-top: 1rem;
+    width: 150px;
+    height: 150px;
+}
+
+.user-about .avatar img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+}
+
+.user-about .data{
+    margin-bottom: 2rem;
+}
+
+.user-about .data > *{
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.user-about .data h4{
+    font-size: 20px;
+}
+
+.user-about .data p{
+    color: #acacac;
+    font-size: 12px;
+}
+
+.user-about .option-list{
+    width: 100%;
+    list-style: none;
+}
+
+.user-about .option-list li{
+    display: flex;
+    align-items: center;
+    height: 45px;
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.user-about .option-list li label{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-left: 1rem;
+    line-height: 45px;
+    box-sizing: border-box;
+}
+
+.user-about .option-list li:hover{
+    cursor: pointer;
+}
+
+.user-about .option-list li > * {
+    cursor: pointer;
+}
+
+.user-about .option-list li.active{
+    background: var(--primary-color);
+}
+
+.user-about .option-list li:not(.active):hover{
+    background: rgba(105, 20, 208, 0.5);
+}
+
+.user-about .option-list li:not(.active):active{
+    background: var(--primary-color);
+}
+
+.user-about .option-list li:last-child:hover{
+    background: rgba(215, 29, 47, 0.5);
+}
+
+.user-about .option-list li:last-child:active{
+    background: rgb(209, 39, 56);
+}
+
+.user-about .option-list li:last-child{
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.user-about .option-list li:last-child button {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.user-about .option-list li input[type="radio"]{
+    display: none;
+}
+
+form[action="logout.php"]{
+    display: none;
+}
+
+.user-menu h3{
+    font-size: 35px;
+    font-weight: 550;
+    text-align: center;
+    padding: 0.5rem;
+    width: 100%;
+    border-bottom: 1px solid var(--primary-text-color);
+    margin-bottom: 2rem;
+}
+
+.user-menu h3:first-of-type{
+    margin-bottom: 3rem;
+}
+
+.user-menu h3:not(:first-child){
+    margin-top: 2rem;
+}
+
+.avatar img{
+    width: 50px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+    text-align: center;
+}
+
+.info .info-row{
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.info .info-row span{
+    width: 15%;
+    font-weight: 550;
+    font-size: 20px;
+    text-align: start
+}
+
+.info .info-row p{
+    width: 85%;
+    font-size: 18px;
+    text-align: center;
+}
+
+form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form.change-info h5{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+form.change-info > div:not(.submit-button-wrapper){
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form.change-info :not(:first-child) h5{
+    margin-top: 2rem;
+}
+
+form.change-info input[name="nome"]{
+    background-color: #161624;
+    font-size: 18px;
+    color: var(--primary-text-color);
+    border: 0;
+    outline: 0;
+    text-align: center;
+    height: 50px;
+    width: 60%;
+    border: 2px solid #161624;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+form.change-info input[name="nome"]:focus{
+    background-color: #1B1B2A;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.image-input-wrapper{
+    width: 65%;
+    height: 35px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    background: #161624;
+    border-radius: 50rem;
+}
+
+#image{
+    opacity: 0;
+    width: 60%;
+}
+
+#image-label{
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+
+.image-input-wrapper .input-append{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    border-radius: 50rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.image-input-wrapper .input-append:hover{
+    cursor: pointer;
+    background: #38384e;
+}
+
+.image-input-wrapper .input-append:active{
+    background: #4a4a65;
+}
+
+.image-input-wrapper .input-append label,
+.image-input-wrapper .input-append small{
+    cursor: pointer;
+}
+
+.image-input-wrapper .input-append label small{
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.submit-button-wrapper{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    width: 165px;
+    height: 50px;
+    border-radius: 0.5rem;
+    z-index: 2;
+}
+
+.submit-button-wrapper:hover{
+    cursor: pointer;
+}
+
+.submit-button-wrapper::before, .submit-button-wrapper::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    translate: -50% -50%;
+    border-radius: 0.5rem;    
+}
+
+.submit-button-wrapper::before{
+    background: linear-gradient(25deg, var(--primary-color) -10%, var(--secondary-color) 100%);
+    z-index: -2;
+}
+
+.submit-button-wrapper::after{
+    background: linear-gradient(25deg, var(--primary-color) 30%, var(--secondary-color) 130%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+}
+    
+.submit-button-wrapper:hover::after{
+    opacity: 1;
+}
+
+form input[type="submit"]{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--primary-text-color);
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 3;
+}
+
+form.change-password input[type="submit"]{
+    font-size: 16px;
+}
+
+#image-preview {
+    display: none;
+    margin-top: 1rem;
+    width: 200px;
+    height: 200px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: #161624;
+    position: relative;
+}
+
+#image-preview.active {
+    display: block;
+}
+
+#image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#remove-image {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#remove-image:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+form.change-password h4{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+form.change-password input[type="password"]{
+    background-color: #161624;
+    font-size: 18px;
+    color: var(--primary-text-color);
+    border: 0;
+    outline: 0;
+    text-align: center;
+    height: 40px;
+    width: 70%;
+    border: 2px solid #161624;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 0.5rem;
+}
+
+form.change-password input[type="password"]:focus{
+    background-color: #1B1B2A;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.menu-content {
+    display: none;
+}
+
+.menu-content.active {
+    display: block;
+    width: 100%;
+    background: var(--secondary-element-color);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
