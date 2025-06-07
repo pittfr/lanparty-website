@@ -20,8 +20,8 @@
             case "login":
                 $page = "login";
                 break;
-            case "profile":
-                $page = "profile";
+            case "perfil":
+                $page = "perfil";
                 break;
             default:
                 $page = "home";
@@ -57,8 +57,8 @@
         case "login":
             $pageSpecificCSS[] = "css/user_login.css";
             break;
-        case "profile":
-            $pageSpecificCSS[] = "css/profile.css";
+        case "perfil":
+            $pageSpecificCSS[] = "css/perfil.css";
             $pageSpecificJS[] = "js/image-preview.js";
             $pageSpecificJS[] = "js/profile-menu.js";
     }

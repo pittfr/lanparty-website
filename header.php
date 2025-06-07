@@ -31,7 +31,7 @@
                     $user = ($db->query("SELECT image FROM utilizadores where id='$userId'"))->fetch_object();
                     $profilePicture = getUserImage($userId, $user->image);
                     echo "<li class='profile'>";
-                    echo "<a href='?page=profile'><img src='$profilePicture' alt='Profile'></a>";
+                    echo "<a href='?page=perfil'><img src='$profilePicture' alt='Profile'></a>";
                     echo "</li>";
                 }
             ?>
