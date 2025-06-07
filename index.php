@@ -20,6 +20,9 @@
             case "login":
                 $page = "login";
                 break;
+            case "register":
+                $page = "register";
+                break;
             case "perfil":
                 $page = "perfil";
                 break;
@@ -57,9 +60,13 @@
         case "login":
             $pageSpecificCSS[] = "css/user_login.css";
             break;
+        case "register":
+            $pageSpecificCSS[] = "css/register.css";
+            break;
         case "perfil":
             $pageSpecificCSS[] = "css/perfil.css";
             $pageSpecificJS[] = "js/image-preview.js";
+            break;
     }
 ?>
 

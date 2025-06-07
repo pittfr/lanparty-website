@@ -9,7 +9,7 @@
         <h1>INSCREVE-TE!</h1>
         <h3>A NOSSA LANPARTY ESPERA POR TI!</h3>
         <div class="home-buttons">
-            <a class="register" href="#">Registrar agora</a>
+            <a class="register" href="?page=register">Registrar agora</a>
             <a class="view-games" href="?page=torneios">Ver jogos</a>
         </div>
     </div>

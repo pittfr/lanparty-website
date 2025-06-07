@@ -19,7 +19,7 @@
                         echo "<h1>Password válida</h1>";
                         $_SESSION['user_id'] = $reg->id;
                         $_SESSION['username'] = $reg->username;
-                        $_SESSION['tipo'] = $reg->email;
+                        $_SESSION['tipo'] = $reg->tipo;
                         header("Location: ?page=home");
                     }else{
                         echo "<h1>Password inválida</h1>";

@@ -5,6 +5,6 @@
         <input placeholder="Password" type="password" name="password" id="password" size="100">
         <input type="submit" value="Entrar">
         <p>Ainda não tens uma conta?</p>
-        <a href="#">Inscreve-te</a>
+        <a href="?page=register">Inscreve-te</a>
     </form>
 </div>

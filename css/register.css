@@ -1,0 +1,90 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1rem, 25dvh, 20rem) clamp(1rem, 10vw, 10rem);
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.register-wrapper{
+    width: clamp(300px, 70vw, 500px);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 2rem;
+    background: var(--element-color);
+    position: relative;
+}
+
+.register-wrapper::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(25deg, var(--primary-color) -10%, var(--secondary-color) 100%);
+    z-index: -1;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    filter: blur(10px);
+}
+
+.register-wrapper form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.register-wrapper h2{
+    font-size: clamp(30px, calc(3vw + 10px), 40px);
+    white-space: nowrap;
+    margin: 1em 0;
+}
+
+.register-wrapper input:not([type="submit"]){
+    width: 80%;
+    padding: 0.75em 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px var(--secondary-element-color);
+    outline: none;
+    color: var(--primary-text-color);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: var(--secondary-element-color);
+    transition: border-color 0.2s;
+}
+
+.register-wrapper input:not([type="submit"]):focus {
+    border-color: var(--secondary-color);
+}
+
+.register-wrapper input[type="submit"]{
+    margin: 1em 0;
+    width: 70%;
+    font-size: 1.2rem;
+    color: var(--primary-text-color);
+    font-weight: 500;
+    padding: 0.5em;
+    border-radius: 2rem;
+    background: linear-gradient(25deg, var(--primary-color) 30%, var(--secondary-color) 130%);
+    border: none;
+    outline: none;
+}
+
+.register-wrapper input[type="submit"]:hover{
+    cursor: pointer;
+}
+
+.register-wrapper a{
+    margin-top: 0.5em;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-decoration: none;
+}
