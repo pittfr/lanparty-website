@@ -102,11 +102,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nome'])) {
         foreach ($infoErrors as $error) {
             addError($error);
         }
+        header("Location: ?page=perfil");
+        exit();
     } else {
         if ($nameChanged || $imageChanged) {
             addSuccess("Alterações guardadas com sucesso!");
-            
-            $_SESSION['profile_updated'] = true;
             
             header("Location: ?page=perfil");
             exit();

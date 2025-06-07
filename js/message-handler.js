@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     setTimeout(() => {
                         message.remove();
                     }, 300);
-                }, 2000);
+                }, 3000);
             }
         });
     }

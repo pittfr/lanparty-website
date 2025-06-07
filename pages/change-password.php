@@ -1,59 +1,46 @@
 <?php
-
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['current-password'])) {
-    $currentPassword = $_POST['current-password'];
-    $newPassword = $_POST['new-password'];
-    $confirmPassword = $_POST['new-password_confirmation'];
-    $passwordChanged = false;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $currentPassword = $_POST['current-password'] ?? '';
+    $newPassword = $_POST['new-password'] ?? '';
+    $confirmPassword = $_POST['new-password_confirmation'] ?? '';
     $passwordErrors = [];
-    
-    if (empty($currentPassword)) {
-        $passwordErrors[] = "É necessário introduzir a password atual.";
-    }else if (empty($newPassword)) {
-        $passwordErrors[] = "É necessário introduzir uma nova password.";
-    }else if (strlen($newPassword) < 8) {
-        $passwordErrors[] = "A nova password deve ter pelo menos 8 caracteres.";
-    }else if ($newPassword !== $confirmPassword) {
-        $passwordErrors[] = "As passwords não coincidem.";
-    }
-    
-    if (empty($passwordErrors)) {
-        $stmt = $db->prepare("SELECT password_hash FROM utilizadores WHERE id = ?");
-        $stmt->bind_param("i", $user->id);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $userData = $result->fetch_assoc();
-        
-        if (!testHash($currentPassword, $userData['password_hash'])) {
-            $passwordErrors[] = "A password atual está incorreta.";
-        } else {
-            $hashedPassword = createHash($newPassword);
-            
-            $updatePassword = $db->prepare("UPDATE utilizadores SET password_hash = ? WHERE id = ?");
-            $updatePassword->bind_param("si", $hashedPassword, $user->id);
-            
-            if ($updatePassword->execute()) {
-                $passwordChanged = true;
-            } else {
-                $passwordErrors[] = "Erro ao atualizar a password: " . $db->error;
-            }
-        }
+
+    $userId = $_SESSION['user_id'];
+    $q = "SELECT password_hash FROM utilizadores WHERE id = ?";
+    $stmt = $db->prepare($q);
+    $stmt->bind_param("i", $userId);
+    $stmt->execute();
+    $stmt->bind_result($passwordHash);
+    $stmt->fetch();
+    $stmt->close();
+
+    if (!testHash($currentPassword, $passwordHash)) {
+        $passwordErrors[] = "A password atual está incorreta.";
+    } else if (strlen($newPassword) < 6) {
+        $passwordErrors[] = "A nova password deve ter pelo menos 6 caracteres.";
+    } else if ($newPassword !== $confirmPassword) {
+        $passwordErrors[] = "A confirmação da password não coincide.";
     }
 
-    // display messages
     if (!empty($passwordErrors)) {
         foreach ($passwordErrors as $error) {
             addError($error);
         }
+        header("Location: ?page=perfil&action=change-password");
+        exit();
     } else {
-        if ($passwordChanged){
+        $newHash = createHash($newPassword);
+        $update = $db->prepare("UPDATE utilizadores SET password_hash = ? WHERE id = ?");
+        $update->bind_param("si", $newHash, $userId);
+        if ($update->execute()) {
             addSuccess("Palavra-passe alterada com sucesso!");
-
-            $_SESSION['password_updated'] = true;
+            header("Location: ?page=perfil&action=change-password");
+            exit();
+        } else {
+            addError("Erro ao atualizar a password: " . $db->error);
         }
     }
 }
-
 ?>
 
 <h3>Alterar password</h3>
