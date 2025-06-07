@@ -224,7 +224,7 @@ form.change-info input[name="nome"]{
     outline: 0;
     text-align: center;
     height: 50px;
-    width: 60%;
+    width: 70%;
     border: 2px solid #161624;
     border-radius: 10px;
     transition: all 0.2s ease-in-out;
@@ -236,8 +236,8 @@ form.change-info input[name="nome"]:focus{
 }
 
 .image-input-wrapper{
-    width: 65%;
-    height: 35px;
+    width: 75%;
+    height: 50px;
     position: relative;
     display: flex;
     flex-wrap: wrap;

@@ -87,6 +87,9 @@ button{
     justify-content: flex-start;
     align-items: center;
     color: black;
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .msg::before{

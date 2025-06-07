@@ -78,6 +78,7 @@
     <?php endforeach; ?>
     
     <script src="js/nav.js" defer></script>
+    <script src="js/message-handler.js" defer></script>
 
     <script>
         const EVENT_DATE = "<?php echo $eventDate;?>";
@@ -93,10 +94,8 @@
         require "header.php";
     ?>
     <ul id="user-messages">
-        <?php
-            // echo msgSuccess("Tarefa realizada com sucesso!");
-            // echo msgWarning("Tarefa realizada com aviso!");
-            // echo msgError("Tarefa realizada com erro!");
+        <?php 
+            echo displayMessages(); 
         ?>
     </ul>
         

@@ -46,4 +46,50 @@
         unset($_SESSION['username']);
         unset($_SESSION['tipo']);
     }
+
+    function addMessage($message, $type) {
+        if(!isset($_SESSION['messages'])) {
+            $_SESSION['messages'] = [];
+        }
+        $_SESSION['messages'][] = [
+            'text' => $message,
+            'type' => $type
+        ];
+    }
+
+    function addSuccess($message) {
+        addMessage($message, 'success');
+    }
+
+    function addWarning($message) {
+        addMessage($message, 'warning');
+    }
+
+    function addError($message) {
+        addMessage($message, 'error');
+    }
+
+    function displayMessages() {
+        $output = '';
+        
+        if(isset($_SESSION['messages']) && !empty($_SESSION['messages'])) {
+            foreach($_SESSION['messages'] as $message) {
+                switch($message['type']) {
+                    case 'success':
+                        $output .= msgSuccess($message['text']);
+                        break;
+                    case 'warning':
+                        $output .= msgWarning($message['text']);
+                        break;
+                    case 'error':
+                        $output .= msgError($message['text']);
+                        break;
+                }
+            }
+            
+            $_SESSION['messages'] = [];
+        }
+        
+        return $output;
+    }
 ?>
