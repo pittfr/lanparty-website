@@ -11,8 +11,7 @@
 
     function getUserImage ($id, $hasImage=null){
         $imagePath = "assets/images/users/$id.webp";
-        $defaultPath = "https://randomuser.me/api/portraits/men/$id.jpg";
-        // $defaultPath = "assets/images/users/default.webp";
+        $defaultPath = "assets/images/users/default.webp";
         
         if($hasImage === false) {
             return $defaultPath;
