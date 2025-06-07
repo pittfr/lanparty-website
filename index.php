@@ -60,7 +60,6 @@
         case "perfil":
             $pageSpecificCSS[] = "css/perfil.css";
             $pageSpecificJS[] = "js/image-preview.js";
-            $pageSpecificJS[] = "js/profile-menu.js";
     }
 ?>
 

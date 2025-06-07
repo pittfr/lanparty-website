@@ -1,13 +1,13 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nome'])) {
     $newName = trim($_POST['nome']);
     $nameChanged = false;
     $imageChanged = false;
-    $errors = [];
+    $infoErrors = [];
     
     if ($newName !== $user->username) {
         if (strlen($newName) < 3) {
-            $errors[] = "O nome deve ter pelo menos 3 caracteres.";
+            $infoErrors[] = "O nome deve ter pelo menos 3 caracteres.";
         }else{
             $updateName = $db->prepare("UPDATE utilizadores SET username = ? WHERE id = ?");
             $updateName->bind_param("si", $newName, $user->id);
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $nameChanged = true;
                 $user->username = $newName;
             } else {
-                $errors[] = "Erro ao atualizar o nome: " . $db->error;
+                $infoErrors[] = "Erro ao atualizar o nome: " . $db->error;
             }
         }
     }
@@ -26,9 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $maxSize = 10 * 1024 * 1024; // 10MB
         
         if (!in_array($_FILES['image']['type'], $allowedTypes)) {
-            $errors[] = "Apenas imagens são permitidas (JPEG, PNG, GIF, WEBP).";
+            $infoErrors[] = "Apenas imagens são permitidas (JPEG, PNG, GIF, WEBP).";
         } elseif ($_FILES['image']['size'] > $maxSize) {
-            $errors[] = "A imagem não pode ter mais de 10MB.";
+            $infoErrors[] = "A imagem não pode ter mais de 10MB.";
         } else {
             $uploadDir = 'assets/images/users/';
             
@@ -85,10 +85,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if ($updateImage->execute()) {
                     $imageChanged = true;
                 } else {
-                    $errors[] = "Erro ao atualizar a informação da imagem: " . $db->error;
+                    $infoErrors[] = "Erro ao atualizar a informação da imagem: " . $db->error;
                 }
             } else {
-                $errors[] = "Erro ao salvar a imagem.";
+                $infoErrors[] = "Erro ao salvar a imagem.";
             }
             
             // free up memory
@@ -98,8 +98,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
     // display messages
-    if (!empty($errors)) {
-        foreach ($errors as $error) {
+    if (!empty($infoErrors)) {
+        foreach ($infoErrors as $error) {
             addError($error);
         }
     } else {
