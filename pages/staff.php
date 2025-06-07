@@ -69,7 +69,7 @@
                         
                         // show coordinator for this subcategory
                         $coordinatorQuery = $db->query("
-                            SELECT u.id, u.username, u.email
+                            SELECT u.id, u.username, u.email, u.image
                             FROM membrostaff m
                             JOIN utilizadores u ON m.id_utilizador = u.id
                             WHERE m.id_subcategoria = {$subcategory['id']}
@@ -84,7 +84,7 @@
                                     <div class='person'>
                                         <div class='avatar'>";
                             
-                            $imagePath = getUserImage($coordinator['id']);
+                            $imagePath = getUserImage($coordinator['id'], (bool)$coordinator['image']);
                             
                             echo "<img src='{$imagePath}' alt='{$coordinator['username']}'>";
                             
@@ -99,7 +99,7 @@
                         
                         // show members for this subcategory
                         $membersQuery = $db->query("
-                            SELECT u.id, u.username
+                            SELECT u.id, u.username, u.image
                             FROM membrostaff m
                             JOIN utilizadores u ON m.id_utilizador = u.id
                             WHERE m.id_subcategoria = {$subcategory['id']}
@@ -111,7 +111,7 @@
                             echo "<div class='members-grid'>";
                             
                             while ($member = $membersQuery->fetch_assoc()) {
-                                $imagePath = getUserImage($member['id']);
+                                $imagePath = getUserImage($member['id'], (bool)$member['image']);
                                 
                                 echo "<div class='card'>
                                         <div class='person'>
