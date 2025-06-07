@@ -78,7 +78,7 @@
     font-size: clamp(14px, 1.5vw, 18px);
 }
 
-.nav-links li{
+.nav-links li:not(.profile){
     position: relative;
     padding-top: clamp(0px, 1vw, 10px);
     height: clamp(35px, calc(20px + 2vw), 40px);
@@ -151,7 +151,7 @@
     justify-content: center;
     padding: 0 !important;
     width: clamp(35px, calc(1rem + 3vw), 50px);
-    aspect-ratio: 1;
+    height: clamp(35px, calc(1rem + 3vw), 50px);
     margin-left: auto;
     margin-right: 3rem;
     z-index: 2;
@@ -159,8 +159,8 @@
 
 .profile a{
     position: relative;
-    height: clamp(35px, calc(1rem + 3vw), 50px);
-    aspect-ratio: 1;
+    width: 100%;
+    height: 100%;
 }
 
 .profile a::before, .profile a::after{
@@ -195,8 +195,8 @@
 }
 
 .profile img{
-    width: 100%;
-    aspect-ratio: 1;
+    width: clamp(35px, calc(1rem + 3vw), 50px);
+    height: clamp(35px, calc(1rem + 3vw), 50px);
     border-radius: 100%;
 }
 

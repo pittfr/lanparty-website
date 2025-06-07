@@ -9,9 +9,21 @@
         return $path;
     }
 
-    function getUserImage ($id){
-        $path = "assets/images/users/$id.webp";
-        return $path;
+    function getUserImage ($id, $hasImage=null){
+        $imagePath = "assets/images/users/$id.webp";
+        $defaultPath = "assets/images/users/default.webp";
+        
+        if($hasImage === false) {
+            return $defaultPath;
+        } else if($hasImage === true) {
+            return $imagePath;
+        }
+        
+        if(file_exists($_SERVER['DOCUMENT_ROOT'] . '/' . $imagePath)) {
+            return $imagePath;
+        } else {
+            return $defaultPath;
+        }
     }
 
     function msgSuccess ($m){

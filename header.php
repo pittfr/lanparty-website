@@ -28,7 +28,8 @@
                     echo "</li>";
                 }else{
                     $userId = $_SESSION['user_id'];
-                    $profilePicture = getUserImage($userId);
+                    $user = ($db->query("SELECT image FROM utilizadores where id='$userId'"))->fetch_object();
+                    $profilePicture = getUserImage($userId, $user->image);
                     echo "<li class='profile'>";
                     echo "<a href='?page=profile'><img src='$profilePicture' alt='Profile'></a>";
                     echo "</li>";

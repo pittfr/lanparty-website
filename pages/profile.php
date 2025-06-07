@@ -16,7 +16,7 @@
     <h2 class="title">Perfil</h2>
     <div class="user-panel">
         <?php
-            $profilePicture = getUserImage($user->id);
+            $profilePicture = getUserImage($user->id, $user->image);
 
             $regDate = DateTime::createFromFormat('Y/m/d', $user->data_registo);
             $formatedDate = $regDate ? $regDate->format('d M, Y') : $user->data_registo;
